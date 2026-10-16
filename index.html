@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Authentic Thai food made from scratch at Tippy Thai House, 34 Barrack Street, Colchester. Order direct and save 10%.">
+<meta name="robots" content="noindex">
+<title>Tippy Thai House – Authentic Thai, Colchester</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--red:#b3261e;--gold:#e8a317;--cream:#fff8ec;--green:#2f6b3a;--dark:#2a1a12}
+*{box-sizing:border-box}body{margin:0;font-family:Poppins,sans-serif;background:var(--cream);color:var(--dark)}
+h1,h2,h3{font-family:'Playfair Display',serif}h2{font-size:2rem;text-align:center;margin:0 0 .3em;color:var(--red)}
+.demo{background:#222;color:#ffd;text-align:center;font-size:.8rem;padding:4px}
+nav{position:sticky;top:0;z-index:5;background:var(--red);display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px;padding:10px}
+nav a{color:#fff;text-decoration:none;font-weight:600;font-size:.9rem}
+section{padding:56px 20px;max-width:1100px;margin:auto}.sub{text-align:center;opacity:.8;margin-bottom:28px}
+.hero{max-width:none;background:linear-gradient(135deg,#7a1410,#b3261e 55%,#e8a317);color:#fff;text-align:center;padding:80px 20px}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);margin:.1em 0}.hero p{font-size:1.2rem}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--green);border-radius:40px;padding:8px 18px;font-weight:600;margin:14px}
+.badge b{background:var(--green);color:#fff;border-radius:50%;width:34px;height:34px;display:grid;place-items:center;font-size:1.2rem}
+.btn{display:inline-block;background:var(--gold);color:var(--dark);border:0;border-radius:30px;padding:14px 30px;font-weight:600;font-size:1rem;cursor:pointer;text-decoration:none}
+.btn.red{background:var(--red);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 3px 12px #0001;border-top:4px solid var(--gold)}
+.item{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px dashed #e5d5bf}
+.item small{display:block;opacity:.7}.price{font-weight:600;color:var(--red);white-space:nowrap}
+.add{background:var(--green);color:#fff;border:0;border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:1.1rem}
+.order{display:grid;grid-template-columns:2fr 1fr;gap:20px}.cart{position:sticky;top:60px;align-self:start}
+.save{background:var(--gold);padding:6px 12px;border-radius:8px;font-weight:600;display:inline-block}
+select,input{padding:10px;border-radius:8px;border:1px solid #ccc;font:inherit;width:100%;margin:4px 0}
+.tag{background:#ffe3a3;font-size:.75rem;padding:3px 8px;border-radius:10px;font-weight:600}
+.big{font-size:2.4rem;color:var(--red);font-family:'Playfair Display',serif}
+.stamps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:380px;margin:16px auto}
+.stamp{aspect-ratio:1;border:3px dashed var(--red);border-radius:50%;display:grid;place-items:center;font-size:1.5rem}
+.stamp.on{background:var(--red);border-style:solid}.stamp.free{border-color:var(--green);background:#e6f3e8;font-size:.7rem;font-weight:600;color:var(--green)}
+.loy{background:linear-gradient(135deg,#fff,#ffefd0);border:2px solid var(--gold)}
+iframe{width:100%;height:320px;border:0;border-radius:14px}
+footer{background:var(--dark);color:#f3e6d3;text-align:center;padding:30px;font-size:.85rem}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:16px}.tabs button{border:2px solid var(--red);background:#fff;color:var(--red);border-radius:20px;padding:6px 14px;cursor:pointer;font-weight:600}.tabs button.on{background:var(--red);color:#fff}
+.find{grid-template-columns:1fr 2fr}
+@media(max-width:760px){.order,.find{grid-template-columns:1fr}.cart{position:static}nav{gap:4px 12px}nav a{font-size:.85rem}}
+</style></head><body>
+<div class="demo">⚠️ DEMO – not live. Mockup for Tippy Thai House; orders and sign-ups are not real.</div>
+<nav><a href="#order">Order direct</a><a href="#menu">Menu</a><a href="#sets">Sharing sets</a><a href="#student">Students</a><a href="#loyalty">Stamp card</a><a href="#find">Find us</a></nav>
+<header class="section hero"><div style="font-size:3rem">🪷🌶️🍜</div><h1>Tippy Thai House</h1><p>Authentic Thai, made from scratch</p>
+<div class="badge"><b>5</b>Food Hygiene Rating: Very Good</div><br><a class="btn" href="#order">Order direct &amp; save 10%</a>
+<p style="font-size:.95rem;opacity:.9;margin-top:20px">34 Barrack Street, Colchester · Collection &amp; dine-in</p></header>
+<section id="order"><h2>Order direct</h2><p class="sub"><span class="save">Order direct &amp; save 10%</span> — no app fees, all your money goes to the kitchen.</p>
+<div class="order"><div class="card"><div class="tabs" id="otabs"></div><div id="olist"></div></div>
+<div class="card cart"><h3>🛍️ Your order</h3><div id="cart"><p style="opacity:.6">Your basket is empty</p></div>
+<label>Order type</label><select id="otype"><option>Collect (ready in ~20 min)</option><option>Dine in</option></select>
+<p>Subtotal: <span id="sub">£0.00</span><br>Direct discount (10%): −<span id="disc">£0.00</span><br><b>Total: <span id="tot">£0.00</span></b></p>
+<button class="btn red" style="width:100%" onclick="checkout()">Checkout</button></div></div></section>
+<section id="menu"><h2>Our Menu</h2><p class="sub">Curries, noodles &amp; stir-fries: choose chicken, beef or pork (king prawn +£1.50)</p><div class="grid" id="fullmenu"></div></section>
+<section id="sets"><h2>Sharing sets</h2><p class="sub"><span class="tag">PROPOSED</span> New bundles built from our best sellers</p>
+<div class="grid"><div class="card"><h3>🥢 Tippy Feast for 2</h3><div class="big">£25</div><p>2 starters · 2 mains · rice</p><p><small>e.g. Spring rolls &amp; chicken satay, Green Curry &amp; Pad Thai, steamed rice</small></p><button class="btn" onclick="addCustom('Tippy Feast for 2',25)">Add to order</button></div>
+<div class="card"><h3>🎉 Tippy Feast for 4</h3><div class="big">£45</div><p>4 starters · 4 mains · rice to share</p><p><small>Perfect for flatmates and family nights</small></p><button class="btn" onclick="addCustom('Tippy Feast for 4',45)">Add to order</button></div></div></section>
+<section id="student"><h2>🎓 Student deal</h2><p class="sub">For University of Essex students (and all students with valid ID)</p>
+<div class="grid"><div class="card"><h3>Show your student ID</h3><div class="big">10% off</div><p>Any order, in the shop or at collection.</p></div>
+<div class="card"><h3>Student meal</h3><div class="big">£7.95</div><p>Any main + steamed rice</p><p><span class="tag">Sunday – Thursday</span></p></div></div></section>
+<section id="loyalty"><h2>Tippy stamp card</h2><p class="sub">Buy 9 mains, get your 10th free</p>
+<div class="card loy" style="max-width:520px;margin:auto;text-align:center"><h3>🪷 Tippy Thai House</h3><div class="stamps" id="stamps"></div>
+<p style="opacity:.7;font-size:.85rem">Example: 4 stamps collected</p>
+<form onsubmit="event.preventDefault();alert('Demo only – thanks '+(this.n.value||'')+'! In the live site you would be signed up to the stamp card.');this.reset()">
+<input name="n" placeholder="Your name" required><input type="email" placeholder="Email" required><input placeholder="Mobile (optional)"><button class="btn red" style="width:100%">Join &amp; get a free spring roll</button></form></div></section>
+<section id="find"><h2>Find us</h2><div class="grid find"><div class="card"><h3>📍 Tippy Thai House</h3><p>34 Barrack Street<br>Colchester<br>CO1 2LJ</p>
+<h3>🕔 Opening hours</h3><p>Daily 17:00 – 22:30</p><p><span class="tag">Hours to confirm</span></p></div>
+<iframe src="https://www.openstreetmap.org/export/embed.html?bbox=0.9050%2C51.8820%2C0.9200%2C51.8890&amp;layer=mapnik" title="Map"></iframe></div>
+<p style="text-align:center"><a href="https://www.openstreetmap.org/search?query=34%20Barrack%20Street%20Colchester%20CO1%202LJ">Open in map</a></p></section>
+<footer>© 2026 Tippy Thai House · 34 Barrack Street, Colchester CO1 2LJ<br>Food Hygiene Rating 5 · Authentic Thai, made from scratch<br><i>Demo website – not live</i></footer>
+<script>
+const M=[{"name": "Starters", "items": [{"n": "Poh Pia Tord", "d": "Fresh vegetable spring roll.", "p": 5.95, "from": false}, {"n": "Mixed Starter", "d": "Spring roll, chicken wing, prawn spring roll, fish cake.", "p": 10.95, "from": false}, {"n": "Tod Mun Pia", "d": "Thai fish cake.", "p": 6.95, "from": false}, {"n": "Kai Satay", "d": "Chicken satay.", "p": 6.95, "from": false}, {"n": "Duck Pancake", "d": "Duck with hoisin sauce and fresh coriander rolls.", "p": 7.95, "from": false}, {"n": "Kung Hom Pra", "d": "Prawn spring rolls.", "p": 6.95, "from": false}, {"n": "Tom Yum Soup", "d": "Hot and sour soup with mushroom.", "p": 6.95, "from": true}, {"n": "Tom Kha", "d": "Hot sour soup with coconut milk.", "p": 6.95, "from": true}, {"n": "Chicken Wing", "d": "Stir fried with onion and red pepper Thai style.", "p": 6.95, "from": false}, {"n": "Thai Salad", "d": "Fresh lettuce, carrots, onion, tomato, lemon and lime.", "p": 7.95, "from": true}, {"n": "Prawn Crackers", "d": "Basket.", "p": 3.5, "from": false}]}, {"name": "Thai Curries", "items": [{"n": "Green Curry", "d": "Thai green curry cooked with holy basil, lemongrass, chilli and coconut milk.", "p": 9.95, "from": true}, {"n": "Red Curry", "d": "Thai red curry cooked with bamboo shoots, sweet basil and coconut milk.", "p": 9.95, "from": true}, {"n": "Yellow Curry", "d": "Thai yellow curry cooked with potato, onion and coconut milk.", "p": 9.95, "from": true}, {"n": "Panang Curry", "d": "Traditional red style curry, cooked fresh lime leaf and sweet coconut milk.", "p": 10.95, "from": true}, {"n": "Massaman", "d": "Chunks of marinated meat cooked with onion, potato and coconut milk.", "p": 10.95, "from": true}]}, {"name": "Noodles and Rice Dishes", "items": [{"n": "Pad Thai", "d": "Stir fried rice noodle with bean sprouts garnished with peanut and lemon slice.", "p": 9.95, "from": true}, {"n": "Pad Mee", "d": "Egg noodle stir fried with bean sprouts and spring onion.", "p": 9.95, "from": true}, {"n": "Pad Se Ew", "d": "Stir fried noodle mix veg with wide noodle.", "p": 9.95, "from": true}, {"n": "Lad Na", "d": "Sticky noodle with fresh veg.", "p": 10.95, "from": true}, {"n": "Steamed Rice", "d": "", "p": 3.95, "from": false}, {"n": "Egg Fried Rice", "d": "", "p": 4.25, "from": false}, {"n": "Coconut Rice", "d": "", "p": 4.5, "from": false}, {"n": "Tippy Fried Rice", "d": "Chicken, pineapple and cashew nut.", "p": 6.95, "from": false}, {"n": "Sticky Rice", "d": "", "p": 4.95, "from": false}]}, {"name": "Stir Fried", "items": [{"n": "Pad Med Ma Maung", "d": "Stir fried cashew nuts, mixed veg and soy sauce.", "p": 9.95, "from": true}, {"n": "Pad Piew Wan", "d": "Thai sweet and sour made with onion, green pepper with pineapple.", "p": 8.95, "from": true}, {"n": "Katam Prik Thai", "d": "Stir fried mix veg, peppers and garlic.", "p": 9.95, "from": true}, {"n": "Pad Khing", "d": "Thai style fried fresh ginger, garlic, spring onion, green and red pepper with chilli.", "p": 8.95, "from": true}, {"n": "Pad Ped Gaplow", "d": "Stir fried mix veg with garlic and basil.", "p": 8.95, "from": true}, {"n": "Mix Veg", "d": "Stir fried veg.", "p": 8.95, "from": true}]}, {"name": "Desserts and Drinks", "items": [{"n": "Coca-Cola Original Taste 330ml Can", "d": "", "p": 1.4, "from": false}, {"n": "Coca-Cola Zero Sugar 330ml Can", "d": "", "p": 1.4, "from": false}, {"n": "7UP 330ml", "d": "", "p": 1.4, "from": false}, {"n": "Tango Orange Can 330ml", "d": "", "p": 1.4, "from": false}, {"n": "Dr Pepper 330ml Can", "d": "", "p": 1.4, "from": false}, {"n": "Lipton Peach Ice Tea 500ml", "d": "", "p": 3.5, "from": false}, {"n": "Still Spring Water", "d": "", "p": 1.2, "from": false}, {"n": "Sticky Rice and Mango", "d": "", "p": 5.95, "from": false}, {"n": "Lipton Lemon Ice Tea 500ml", "d": "", "p": 3.5, "from": false}]}, {"name": "Set Menu", "items": [{"n": "Set Menu A (For 2 People)", "d": "Spring roll, chicken wing, chicken satay, thai green curry chicken, pad piew wan, stir fried mix veg, steamed rice.", "p": 33.0, "from": false}, {"n": "Set Menu B (For 2 People)", "d": "Spring roll, chicken satay, king prawn roll, Thai red curry chicken, pad med ma mung, stir fried mix veg, pad thai pork, steamed rice.", "p": 40.0, "from": false}, {"n": "Set Menu Vegan (For 2 People)", "d": "Spring roll, veg tempura, vegan spicy beef stir fried, tofu green curry, stir fried mix veg, steamed rice.", "p": 30.95, "from": false}, {"n": "Set Menu for One (Pad Thai)", "d": "Pad thai, spring roll, can of drink.", "p": 14.95, "from": false}, {"n": "Set Menu for One (Rice)", "d": "Steamed rice, spring roll, can of drink.", "p": 18.95, "from": false}]}, {"name": "Chef Special", "items": [{"n": "Giant King Prawn in Tamarind", "d": "Grilled king prawn in tamarind sauce with soya sauce fried onion and dry chilli on top.", "p": 21.95, "from": false}, {"n": "Battered Duck in Tamarind Sauce", "d": "Deep fried duck topped with tamarind sauce, sesame seeds with freshly chopped onion.", "p": 12.95, "from": false}, {"n": "Thai Sausage", "d": "Pork mince mixed with pepper salt and garlic served with fresh salad.", "p": 9.95, "from": false}, {"n": "Thai Papaya Salad", "d": "Green papaya salad with chilli, garlic and fish sauce served with fresh limes, tomato and fresh salad.", "p": 9.95, "from": false}]}];const f=p=>'£'+p.toFixed(2);let cart=[];
+const row=(i,btn)=>`<div class="item"><div><b>${i.n}</b><small>${i.d}</small></div><div><span class="price">${i.from?'from ':''}${f(i.p)}</span> ${btn?`<button class="add" aria-label="Add ${i.n}" onclick='addCustom(${JSON.stringify(i.n)},${i.p})'>+</button>`:''}</div></div>`;
+fullmenu.innerHTML=M.map(c=>`<div class="card"><h3>${c.name}</h3>${c.items.map(i=>row(i)).join('')}</div>`).join('');
+function tab(k){otabs.querySelectorAll('button').forEach((b,j)=>b.className=j==k?'on':'');olist.innerHTML=M[k].items.map(i=>row(i,1)).join('')}
+otabs.innerHTML=M.map((c,k)=>`<button onclick="tab(${k})">${c.name}</button>`).join('');tab(0);
+function addCustom(n,p){let x=cart.find(c=>c.n==n);x?x.q++:cart.push({n,p,q:1});draw()}
+function rm(k){cart[k].q--;if(!cart[k].q)cart.splice(k,1);draw()}
+function draw(){let s=cart.reduce((a,c)=>a+c.p*c.q,0);cartEl().innerHTML=cart.length?cart.map((c,k)=>`<div class="item"><span>${c.q}× ${c.n}</span><span>${f(c.p*c.q)} <button class="add" style="background:#777" aria-label="Remove one ${c.n}" onclick="rm(${k})">−</button></span></div>`).join(''):'<p style="opacity:.6">Your basket is empty</p>';
+document.getElementById('sub').textContent=f(s);disc.textContent=f(s*.1);tot.textContent=f(s*.9)}
+function cartEl(){return document.getElementById('cart')}
+function checkout(){if(!cart.length)return alert('Add something tasty first!');alert('DEMO ONLY – this is a mockup.\n\n'+otype.value+'\nTotal: '+tot.textContent+'\n\nIn the live site, payment would be taken here (e.g. Square Online).')}
+stamps.innerHTML=[...Array(10)].map((_,k)=>`<div class="stamp ${k<4?'on':''} ${k==9?'free':''}">${k<4?'🌶️':k==9?'FREE':''}</div>`).join('');
+</script></body></html>
